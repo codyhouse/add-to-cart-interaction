@@ -1,13 +1,19 @@
-Add to Cart Interaction
+# Add to Cart Interaction
 
-=========
+A floating cart component that reveals itself when the user adds an item to the cart.
 
-A floating cart that slides in when the user decides to buy an item.
+[Article on CodyHouse](https://codyhouse.co/gem/add-to-cart-interaction)
 
-[Article on CodyHouse](https://codyhouse.co/gem/add-to-cart-interaction/)
+[Demo](https://codyhouse.co/demo/add-to-cart-interaction)
 
-[Demo](https://codyhouse.co/demo/add-to-cart-interaction/index.html)
+[License](https://codyhouse.co/license)
 
-Icons: [Nucleo](http://nucleoapp.com/)
- 
-[Terms](https://codyhouse.co/terms/)
+## Dependencies
+
+This experiment is built upon the [CodyHouse Framework](https://github.com/CodyHouse/codyhouse-framework).
+
+Make sure to include both _globals.scss and util.js files of the framework.
+
+## Credits
+
+Icons: [Nucleo Library](https://nucleoapp.com/)
