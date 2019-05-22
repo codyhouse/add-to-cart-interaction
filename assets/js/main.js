@@ -11,7 +11,8 @@
   		cartCountItems = cartCount.getElementsByTagName('li'),
   		cartUndo = cart[0].getElementsByClassName('cd-cart__undo')[0],
   		productId = 0, //this is a placeholder -> use your real product ids instead
-  		cartTimeoutId = false;
+  		cartTimeoutId = false,
+  		animatingQuantity = false;
 		initCartEvents();
 
 
@@ -62,6 +63,7 @@
 
 		function addToCart(event) {
 			event.preventDefault();
+			if(animatingQuantity) return;
 			var cartIsEmpty = Util.hasClass(cart[0], 'cd-cart--empty');
 			//update cart product list
 			addProduct(this);
@@ -139,6 +141,7 @@
 				if( emptyCart ) {
 					cartCountItems[0].innerText = actual;
 					cartCountItems[1].innerText = next;
+					animatingQuantity = false;
 				} else {
 					Util.addClass(cartCount, 'cd-cart__count--update');
 
@@ -152,6 +155,7 @@
 
 					setTimeout(function() {
 						cartCountItems[1].innerText = next;
+						animatingQuantity = false;
 					}, 230);
 				}
 			} else {
@@ -160,6 +164,7 @@
 				
 				cartCountItems[0].innerText = actual;
 				cartCountItems[1].innerText = next;
+				animatingQuantity = false;
 			}
 		};
 
